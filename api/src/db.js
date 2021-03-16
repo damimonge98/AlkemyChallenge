@@ -31,4 +31,4 @@ user.hasMany(operation)
 
 console.log ("DB connected!")
 
-module.exports = { db }
+module.exports = { ...db.models, db }

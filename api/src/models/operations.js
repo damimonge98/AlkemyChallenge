@@ -3,15 +3,7 @@ module.exports = (sequelize) => {
  sequelize.define ("operation", {
      type: {
          type: DataTypes.ENUM,
-         values: ["revenue", "expenditure"],
-         allowNull:false
-     },
-     createdAt: {
-         type: DataTypes.DATE,
-         allowNull:false
-     },
-     updatedAt: {
-         type: DataTypes.DATE,
+         values: ["ingreso", "egreso"],
          allowNull:false
      },
      description: {
