@@ -32,15 +32,24 @@ const { amount, type, description } = req.body;
 
 //Update an operation
 router.put("/:id", (req,res) => {
-    const { amount, type, description} = req.body
+    const { amount, description} = req.body
     const { id } = req.params;
     
     operation.update({
     amount,
-    type,
     description},
     {where: {id}})
     .then (updatedOperation => res.json (updatedOperation))
+})
+
+
+//Delete an operation
+router.delete ("/:id", (req,res) => {
+    const { id } = req.params;
+    operation.findByPk (id)
+    .then (operation => 
+        operation.destroy())
+    .then (destroyedOperation => res.json ("Operation deleted succesfully"))
 })
 
 
