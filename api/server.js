@@ -1,27 +1,29 @@
 const express = require ("express");
 const morgan = require ("morgan");
+/*
+const routes = require ("./src/routes/index.js")
+*/
+
 
 const {db} = require ("./src/db.js");
 
 const app = express();
-const puerto = 3001;
+const port = 3001;
 
 
 //middlewares
-app.use(morgan ("dev")); //Esto muestra las peticiones en la terminal
-app.use (express.json())
+app.use(morgan ("dev")); 
+app.use (express.json());
 
-//Conectamos la base de datos al servidor
+/*
+app.use ("/", routes)
+*/
+
+//El servidor corre una vez que express conecta la base de datos
 db.sync({ force:true })
     .then(function () {
-        app.listen (puerto, function () {
-            console.log("Corriendo en el puerto 3001")
+        app.listen (port, function () {
+            console.log("Server running on port", port , "!")
         })
 
     })
-
-
-app.get ("/", (req, res)=> {
-    res.status(201);
-    res.send("Inicio")
-})
