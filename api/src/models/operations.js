@@ -10,7 +10,11 @@ module.exports = (sequelize) => {
          type: DataTypes.STRING
      },
      amount: {
-         type: DataTypes.DECIMAL,
+         type: DataTypes.FLOAT,
+         allowNull: false
+     },
+     date: {
+         type: DataTypes.DATEONLY,
          allowNull: false
      }
  })

@@ -11,13 +11,15 @@ router.get ("/", (req, res) => {
 
 //Post an operation
 router.post ("/", (req, res) => {
-const { amount, type, description } = req.body;
-    categories.findOne({where: {name : "nocategory"}})
+console.log(req.body)
+const { amount, type, description,date } = req.body;
+    categories.findOne({where: {name : "otro"}})
     .then (category => 
         operation.create({
             amount,
             type,
             description,
+            date,
             categoryId: category.id
         })
     .then(newOperation =>
@@ -32,11 +34,12 @@ const { amount, type, description } = req.body;
 
 //Update an operation
 router.put("/:id", (req,res) => {
-    const { amount, description} = req.body
+    const { amount, description,date} = req.body
     const { id } = req.params;
     
     operation.update({
     amount,
+    date,
     description},
     {where: {id}})
     .then (updatedOperation => res.json (updatedOperation))

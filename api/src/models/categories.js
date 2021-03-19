@@ -3,7 +3,7 @@ module.exports = (sequelize) => {
  sequelize.define ("categories", {
      name: {
          type: DataTypes.ENUM,
-         values: ["entretenimiento", "vacaciones", "restaurantes", "salud", "compras", "transporte", "nocategory"],
+         values: ["entretenimiento", "vacaciones", "restaurantes", "salud", "compras", "transporte", "otro"],
          allowNule: false
      }
  })
