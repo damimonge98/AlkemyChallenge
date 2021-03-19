@@ -118,3 +118,5 @@ dist
 
 #carpeta de uploads
 api/src/upload
+
+package-lock.json
