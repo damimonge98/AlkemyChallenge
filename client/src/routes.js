@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
-import Home from "./components/Home/Home";
-import ABM from "./components/ABM/ABM";
+import Home from "./containers/Home/Home";
+import ABM from "./containers/ABM/ABM";
 
 export default function Routes () {
     return (

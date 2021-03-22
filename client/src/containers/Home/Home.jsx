@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import {useHistory} from "react-router-dom";
 import "./home.css";
 import axios from "axios";
-import Spinner from 'react-bootstrap/Spinner';
+import TotalFinances from "../../components/TotalFinances/TotalFinances";
+import Operations from "../../components/Operations/Operations";
 
 export default function Home () {
     
@@ -29,39 +30,12 @@ export default function Home () {
     var expensivesReduce = operation!==0? expensives.reduce(function(contador, expensives){return contador + Number(expensives.amount)},0) : null;
 
     return (
-        <div>
-            {lastOperations.length === 0?
-            <div className = "containerHomeDiv">
-            <h1>Balance de presupuesto personal.</h1>
-            <h2>Ingrese su presupuesto aquí</h2>
-            </div>
-            :
-            <div className = "containerHomeDiv">
-            <h1>Balance de presupuesto personal.</h1>
-            <h3>Últimas Operaciones:</h3>
-            
-            {lastOperations ?
+        <div className = "containerHomeDiv">
 
-            lastOperations.map(el => 
-            <div className = "containerEntryDiv">
-            <h1>{el.type}</h1> 
-            <p>{el.amount} {el.description} {el.categoryId}</p>
-            <h6>{el.date}</h6>
-            </div>)
-
-            :
-            <Spinner animation="border" role="status">
-                <span className="sr-only">Loading...</span>
-            </Spinner>
-            }
-
-            <h1>TOTAL INGRESOS:{entryReduce}</h1>
-            <h2>TOTAL EGRESOS: {expensivesReduce}</h2>
-            <h2>BALANCE FINAL{entryReduce - expensivesReduce}</h2>
+            <TotalFinances entryReduce={entryReduce} expensivesReduce={expensivesReduce}/>
+            <Operations lastOperations={lastOperations}/>
 
             <button onClick = {()=>{history.push("/abm")}}>Modificar presupuesto</button>
-        </div>
-            }
         </div>
     )
 }

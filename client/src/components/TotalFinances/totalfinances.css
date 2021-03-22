@@ -1,0 +1,7 @@
+
+.totalFinancesContainer {
+    display: flex;
+    background: green;
+    align-items: center;
+    justify-content: space-around;
+}
