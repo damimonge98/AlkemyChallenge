@@ -1,6 +1,5 @@
 import React from "react";
-import Spinner from 'react-bootstrap/Spinner';
-import "./operations.css";
+import "./lastoperations.css";
 
 export default function Operations (props) {
 

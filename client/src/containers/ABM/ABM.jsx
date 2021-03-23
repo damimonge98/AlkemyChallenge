@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { useHistory } from "react-router-dom";
 import axios from "axios";
 import "./ABM.css";
-import NewOperation from "../../components/Forms/NewOperation";
+import NewOperation from "../../components/Forms/NewOperation/NewOperation";
 import AllOperations from "../../components/Operations/AllOperations/AllOperations";
 
 

@@ -3,7 +3,7 @@ import {useHistory} from "react-router-dom";
 import "./home.css";
 import axios from "axios";
 import TotalFinances from "../../components/TotalFinances/TotalFinances";
-import Operations from "../../components/Operations/Operations";
+import LastOperations from "../../components/Operations/LastOperations/LastOperations";
 
 export default function Home () {
     
@@ -33,7 +33,7 @@ export default function Home () {
         <div className = "containerHomeDiv">
 
             <TotalFinances entryReduce={entryReduce} expensivesReduce={expensivesReduce}/>
-            <Operations lastOperations={lastOperations}/>
+            <LastOperations lastOperations={lastOperations}/>
 
             <button onClick = {()=>{history.push("/abm")}}>Modificar presupuesto</button>
         </div>
