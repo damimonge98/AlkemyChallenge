@@ -20,8 +20,12 @@ export default function Home () {
         .then (res => setCategories(res))
     }, [])
 
-    var lastOperations = operation!== 0? operation.data.slice(operation.data.length-10, operation.data.length) : []
-    var lastOperations = lastOperations.reverse()
+    var lastOperations = []
+    
+    var lastOperations = operation!== 0? operation.data: []
+    lastOperations = lastOperations.length >= 10 ? lastOperations.slice(operation.data.length-10, operation.data.length) : lastOperations
+    lastOperations = lastOperations.reverse()
+    
 
     var entry = operation!==0? operation.data.filter(el => el.type==="ingreso") : null
     var expensives = operation!==0? operation.data.filter(el=> el.type === "egreso") : null

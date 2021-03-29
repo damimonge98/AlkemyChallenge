@@ -1,5 +1,13 @@
-.containerEntryDiv {
-    background: rgb(219, 163, 142);
+.containerLastOperationDiv {
+    background: lightgray;
     margin: auto;
+    margin-top: 2%;
     width: 40%;
+    border-width:5px;  
+    border-style:inset;
+    border-color: gray;
+}
+
+.h1Amount {
+    padding-left: 60%;
 }

@@ -14,22 +14,19 @@ export default function NewOperation () {
         //handlers
 
         function onChange (e) {
+            var targetData = e.target.value
+            targetData = e.target.value.replace("$","")
+            targetData = targetData.toLowerCase()
+
             setData ({
                 ...data,
-                [e.target.name] : e.target.value
+                [e.target.name] : targetData
             })}
         
             function onSubmit (event) {
-                event.preventDefault();
-                setData({
-                    ...data,
-                    amount: data.amount.replace("$"," "),
-                    type: data.type.toLowerCase()
-                })
-                
                 axios.post("/operations",data)
             }
-        
+
     return (
             <div>
                 <h1>Registrar nueva operación</h1>
@@ -44,11 +41,11 @@ export default function NewOperation () {
                     <CurrencyInput
                         onChange={onChange}
                         name="amount"
-                        prefix="$"
                         placeholder="$0"
                         defaultValue={0}
                         allowDecimals={true}
                         defaultValue={0}
+                        prefix = {"$"}
                         decimalsLimit={2}
                         groupSeparator = ','
                         decimalSeparator= '.'

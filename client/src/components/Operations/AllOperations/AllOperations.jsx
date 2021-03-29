@@ -1,7 +1,8 @@
-import React from "react";
+import React, {useState} from "react";
 import "./alloperations.css";
 
 export default function AllOperations (props) {
+
     return (<div>
         <h1>Tus movimientos</h1>
                 <div>
