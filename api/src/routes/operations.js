@@ -11,7 +11,6 @@ router.get ("/", (req, res) => {
 
 //Post an operation
 router.post ("/", (req, res) => {
-console.log(req.body)
 const { amount, type, description,date } = req.body;
     categories.findOne({where: {name : "otro"}})
     .then (category => 
