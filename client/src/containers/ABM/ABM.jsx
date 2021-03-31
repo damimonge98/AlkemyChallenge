@@ -11,16 +11,19 @@ export default function ABM () {
  
     
     const [operation, setOperation] = useState([]);
+    const [categories, setCategories] = useState ([])
     const history = useHistory();
     
     useEffect (()=> {
         axios.get("/operations")
         .then (res => setOperation(res))
+        axios.get("/categories")
+        .then (res => setCategories(res))
     }, [])
 
     return (
             <div>
-                <NewOperation operation = {operation}/> 
+                <NewOperation operation = {operation} categories = {categories}/> 
                 <AllOperations operation = {operation}/>
                 <button onClick = {()=>{history.push("/")}}>HOME</button>
             </div>

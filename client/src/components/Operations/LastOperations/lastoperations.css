@@ -1,8 +1,20 @@
-.containerLastOperationDiv {
-    background: lightgray;
+.containerLastOperationsDiv {
+    height: 70%;
+    background-color: hotpink;
+    width: 50%;
     margin: auto;
+    margin-top: 5%;
+}
+
+.h3title {
+    text-align: center;
+}
+.lastOperationDiv {
+    background: white;
+    margin: auto;
+    height:6%;
     margin-top: 2%;
-    width: 40%;
+    width: 60%;
     border-width:5px;  
     border-style:inset;
     border-color: gray;
@@ -10,4 +22,14 @@
 
 .h1Amount {
     padding-left: 60%;
+}
+
+.infoOperationDiv {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 5%;
+}
+
+.operationType{
+    font-weight: bold;
 }

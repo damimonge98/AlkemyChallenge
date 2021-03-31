@@ -37,9 +37,8 @@ export default function Home () {
         <div className = "containerHomeDiv">
 
             <TotalFinances entryReduce={entryReduce} expensivesReduce={expensivesReduce}/>
-            <LastOperations lastOperations={lastOperations}/>
-
             <button onClick = {()=>{history.push("/abm")}}>Modificar presupuesto</button>
+            <LastOperations lastOperations={lastOperations}/>
         </div>
     )
 }
