@@ -18,11 +18,14 @@ export default function ABM () {
     
     useEffect (()=> {
         axios.get("/operations")
-        .then (res => setOperation(res))
+        .then (res => setOperation(res.data.reverse()))
         axios.get("/categories")
         .then (res => setCategories(res))
     }, [])
 
+    var reverseOperations = operation
+    console.log("reverseOperations", reverseOperations)
+    console.log("operation", operation)
     return (
             <div className = "divABM">
                 <TotalFinances/>

@@ -2,14 +2,13 @@ import React, {useState, Fragment} from "react";
 import "./alloperations.css";
 
 export default function AllOperations (props) {
-
-    console.log(props.operation)
+    console.log(props.operation, "props")
 
     return (<div className = "allOperationsDiv">
         <h1 style = {{textAlign : "center"}}>Mis movimientos</h1>
                 <div>
 
-                    {props.operation.length === 0?
+                    {!props.operation || props.operation.length === 0?
                     null
                     :
                     
@@ -22,7 +21,7 @@ export default function AllOperations (props) {
                             <th className = "thTable">Concepto</th>
                             <th className = "thTable">Categoría</th>
                         </tr>
-                        {props.operation.data.map(el => 
+                        {props.operation.map(el => 
                         
                         <tr>
                                 

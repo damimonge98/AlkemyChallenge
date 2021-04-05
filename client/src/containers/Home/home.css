@@ -4,3 +4,25 @@
     height: 1000px;
     margin-bottom: 10%;
 }
+
+.stickyNewOperation {
+    position: fixed;
+    background: orangered;
+    right: 3%;
+    bottom: 10%;
+    width: 5%;
+    height: 11%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.stickyNewOperation:hover {
+    color: white;
+}
+
+.plusP {
+    text-align: center;
+    font-weight: bold;
+    font-size: 3em;
+    margin: auto;
+}

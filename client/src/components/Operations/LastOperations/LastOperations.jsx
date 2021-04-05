@@ -1,8 +1,10 @@
 import React, {useState, useEffect } from "react";
 import "./lastoperations.css";
 import axios from "axios";
-import { FaPlaneDeparture, FaTasks, FaPizzaSlice, FaClinicMedical, FaShoppingCart, FaBus, FaRegSmileBeam} from 'react-icons/fa';
-
+import { FaPlaneDeparture, FaTasks, FaPizzaSlice, FaClinicMedical, FaShoppingCart, FaBus, FaRegSmileBeam, FaFilter, FaBell} from 'react-icons/fa';
+import {FontAwesome, FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faFilter} from "@fortawesome/free-solid-svg-icons";
+import Button from "../../Button/Button";
 
 export default function Operations () {
     const [categories, setCategories] = useState([]);
@@ -27,7 +29,11 @@ export default function Operations () {
     console.log("operations", operation)
 
     return (<div className = "containerLastOperationsDiv">
+
+            <div className = "headerDiv">
             <h3 className = "h3title">TUS ÚLTIMAS OPERACIONES:</h3>
+            <FontAwesomeIcon icon = {faFilter} size = "lg" className = "filterIcon"/>
+            </div>
 
             {lastOperations.length !== 0 ?
             lastOperations.map(el => 

@@ -76,8 +76,8 @@ export default function NewOperation (props) {
          function handleSubmit (event) {
             event.preventDefault()
             checkSubmit();
-            setTimeout(onSubmitData, 2000);
-            setTimeout(updateData,3000)
+            setTimeout(onSubmitData, 1000);
+            setTimeout(updateData,2000)
         }
 
     return (
