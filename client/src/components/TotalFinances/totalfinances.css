@@ -1,7 +1,19 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&family=Train+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 .totalFinancesContainer {
     display: flex;
-    background: green;
+    background: orangered;
     align-items: center;
     justify-content: space-around;
+    height: 15%;
+}
+
+.myFinancesApp {
+    font-family: Train One;
+}
+
+.fontFinances {
+    font-family: 'PT Sans Narrow', sans-serif;
+    text-align: center;
+
 }

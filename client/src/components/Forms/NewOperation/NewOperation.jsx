@@ -39,7 +39,7 @@ export default function NewOperation (props) {
         }
 
          function checkSubmit () {
-            //Verifica si el arreglo de categorías está vacio, y si lo está crea una por default
+            //Verifica si el arreglo de categorías está vacio o si no existe, y si lo está crea una por default
             if (props.categories.data.length === 0 || !props.categories.data) {
                 axios.post("/categories/", {name: "otro"})
 
@@ -81,9 +81,9 @@ export default function NewOperation (props) {
         }
 
     return (
-            <div>
-                <h1>Registrar nueva operación</h1>
-                <form onSubmit={handleSubmit}>
+            <div style = {{margin : "auto"}}>
+                <h1 style = {{textAlign : "center"}}>Nueva operación</h1>
+                <form  onSubmit={handleSubmit}>
                     <label>Tipo</label>
                     <select onChange = {onChange} name = "type"  defaultValue = "Ingreso">
                         <option>Ingreso</option>

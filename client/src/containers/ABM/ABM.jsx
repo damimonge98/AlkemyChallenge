@@ -4,6 +4,8 @@ import axios from "axios";
 import "./ABM.css";
 import NewOperation from "../../components/Forms/NewOperation/NewOperation";
 import AllOperations from "../../components/Operations/AllOperations/AllOperations";
+import Button from "../../components/Button/Button";
+import TotalFinances from "../../components/TotalFinances/TotalFinances";
 
 
 
@@ -22,10 +24,11 @@ export default function ABM () {
     }, [])
 
     return (
-            <div>
+            <div className = "divABM">
+                <TotalFinances/>
+                <Button info = "HOME" onClick = "/"/>
                 <NewOperation operation = {operation} categories = {categories}/> 
                 <AllOperations operation = {operation}/>
-                <button onClick = {()=>{history.push("/")}}>HOME</button>
             </div>
         
     )

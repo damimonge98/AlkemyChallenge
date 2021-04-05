@@ -1,23 +1,43 @@
-import React, {useState} from "react";
+import React, {useState, Fragment} from "react";
 import "./alloperations.css";
 
 export default function AllOperations (props) {
 
-    return (<div>
-        <h1>Tus movimientos</h1>
+    console.log(props.operation)
+
+    return (<div className = "allOperationsDiv">
+        <h1 style = {{textAlign : "center"}}>Mis movimientos</h1>
                 <div>
 
                     {props.operation.length === 0?
                     null
                     :
-                    props.operation.data.map(el => 
+                    
                     <div className = "divContainerAllOperations"> 
-                    <h1>{el.amount}</h1>
-                    <h2>{el.type}</h2>
-                    <h3>{el.description}</h3>
-                    <h4>{el.date}</h4>
+                    <table className = "table">
+                        <tr>
+                            <th className = "thTable">Fecha</th>
+                            <th className = "thTable">Tipo</th>
+                            <th className = "thTable">Monto $</th>
+                            <th className = "thTable">Concepto</th>
+                            <th className = "thTable">Categoría</th>
+                        </tr>
+                        {props.operation.data.map(el => 
+                        
+                        <tr>
+                                
+                                <td className = "tdTable">{el.date}</td>
+                                <td className = "tdTable">{el.type}</td>
+                                <td className = "tdTable">{el.amount}</td>
+                                <td className = "tdTable">{el.description}</td>
+                                <td className = "tdTable">{el.categoryId}</td>
+                        </tr>        
+                               
+                            )}
+                        
+                    </table>
                     </div>
-                    )}
+                    }
                     </div>
 
     </div>)

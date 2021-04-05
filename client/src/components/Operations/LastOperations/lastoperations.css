@@ -1,23 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
 .containerLastOperationsDiv {
-    height: 70%;
-    background-color: hotpink;
-    width: 50%;
+    height: all;
+    background-color: orange;
     margin: auto;
-    margin-top: 5%;
+    font-family: 'PT Sans Narrow', sans-serif;;
 }
 
 .h3title {
     text-align: center;
+    font-size: 200%;
 }
 .lastOperationDiv {
     background: white;
     margin: auto;
-    height:6%;
+    height:8%;
     margin-top: 2%;
-    width: 60%;
+    width: 40%;
     border-width:5px;  
-    border-style:inset;
-    border-color: gray;
 }
 
 .h1Amount {
@@ -31,5 +31,8 @@
 }
 
 .operationType{
+    padding: auto;
+    margin-right: 1%;
     font-weight: bold;
+    font-size: 150%;
 }

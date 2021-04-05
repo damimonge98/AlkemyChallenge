@@ -1,0 +1,18 @@
+.allOperationsDiv {
+    height: all;
+    width: 90%;
+    margin: auto;
+}
+
+.table {
+    width: 100%;
+}
+
+.tdTable {
+   text-align: center;
+   border: 1px solid black;
+}
+
+.thTable {
+    border: 1px solid black
+}
