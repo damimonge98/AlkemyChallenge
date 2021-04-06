@@ -24,6 +24,7 @@ export default function Operations () {
     //Handlers para filtrado de categorías
     const filterHandler = function () {
         setFilter(!filter)
+        setFilterCategories([])
     }
 
     const filterCategoriesHandler = function (id) {
