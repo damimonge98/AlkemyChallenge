@@ -3,6 +3,7 @@ import "./alloperations.css";
 
 export default function AllOperations (props) {
     console.log(props.operation, "props")
+    console.log("props.categories", props.categories.data)
 
     return (<div className = "allOperationsDiv">
         <h1 style = {{textAlign : "center"}}>Mis movimientos</h1>
@@ -29,7 +30,7 @@ export default function AllOperations (props) {
                                 <td className = "tdTable">{el.type}</td>
                                 <td className = "tdTable">{el.amount}</td>
                                 <td className = "tdTable">{el.description}</td>
-                                <td className = "tdTable">{el.categoryId}</td>
+                                <td className = "tdTable">{props.categories.data? props.categories.data[el.categoryId-1].name : ""}</td>
                         </tr>        
                                
                             )}

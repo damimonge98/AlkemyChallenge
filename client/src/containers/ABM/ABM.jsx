@@ -31,7 +31,7 @@ export default function ABM () {
                 <TotalFinances/>
                 <Button info = "HOME" onClick = "/"/>
                 <NewOperation operation = {operation} categories = {categories}/> 
-                <AllOperations operation = {operation}/>
+                <AllOperations operation = {operation} categories = {categories}/>
             </div>
         
     )
