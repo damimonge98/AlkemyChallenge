@@ -16,3 +16,14 @@
 .thTable {
     border: 1px solid black
 }
+
+.h3Title {
+    font-size: 200%;
+    text-align: center;
+}
+
+.edit {
+    text-align: center;
+    border: 1px solid black;
+    cursor: pointer;
+}

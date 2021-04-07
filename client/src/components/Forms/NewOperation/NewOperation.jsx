@@ -82,7 +82,9 @@ export default function NewOperation (props) {
 
     return (
             <div style = {{margin : "auto"}}>
-                <h1 style = {{textAlign : "center"}}>Nueva operación</h1>
+                <div className = "headerDiv">
+                <h3 className = "h3Title">NUEVA OPERACIÓN</h3>
+                </div>
                 <form  onSubmit={handleSubmit}>
                     <label>Tipo</label>
                     <select onChange = {onChange} name = "type"  defaultValue = "Ingreso">

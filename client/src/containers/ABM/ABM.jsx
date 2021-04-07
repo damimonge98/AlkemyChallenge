@@ -7,11 +7,8 @@ import AllOperations from "../../components/Operations/AllOperations/AllOperatio
 import Button from "../../components/Button/Button";
 import TotalFinances from "../../components/TotalFinances/TotalFinances";
 
-
-
 export default function ABM () {
  
-    
     const [operation, setOperation] = useState([]);
     const [categories, setCategories] = useState ([])
     const history = useHistory();
@@ -32,6 +29,7 @@ export default function ABM () {
                 <Button info = "HOME" onClick = "/"/>
                 <NewOperation operation = {operation} categories = {categories}/> 
                 <AllOperations operation = {operation} categories = {categories}/>
+                
             </div>
         
     )
